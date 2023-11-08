@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import ReactPlayer from "react-player";
 import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container} from "react-bootstrap"
+
 
 
 
@@ -12,11 +15,7 @@ const StyledVideoPlayer = styled(ReactPlayer)`
   position: absolute;
 `;
 
-const Container = styled.div`
-width: 100%;
-height: 100%;
 
-`
 
 const PlayerWrapper = styled.div`
 position: relative;
@@ -55,9 +54,26 @@ function App() {
   return (
    
   
-     
-    
+  
+             
 <PlayerWrapper>
+
+
+
+<Container>
+<div className='ratio ratio-16x9'>
+
+<iframe src="https://www.youtube.com/embed/sPyAQQklc1s?si=ihed-LnLYFEe7xDc"
+    
+    title='Youtube video player'
+    allow='accelerometer; autoplay; clopboard-write; encrypted-media; gyroscope; picture-in-picture'
+    allowFullScreen>
+</iframe>
+</div>
+
+</Container>
+
+
 <StyledVideoPlayer
                     className="video"
                     url={projectVideo}
@@ -69,8 +85,12 @@ function App() {
                    
                   />
 
+
 </PlayerWrapper>
 
+  
+     
+ 
    
   );
 }
