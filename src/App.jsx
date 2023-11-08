@@ -31,7 +31,7 @@ function App() {
 
 
   const videoRef = useRef(null);
-  const projectVideo = `https://youtu.be/sPyAQQklc1s?si=bZasVcYlWVvMDpdx`;
+  const projectVideo = `https://www.youtube.com/watch?v=sPyAQQklc1s`;
 
   useEffect(() => {
     // Accede al elemento de video utilizando videoRef.current
@@ -62,7 +62,7 @@ function App() {
                     className="video"
                     url={projectVideo}
                     controls
-                    loop
+                    
                     width="100%"
                     height="800px"
                    
