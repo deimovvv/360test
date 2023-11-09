@@ -66,8 +66,9 @@ function App() {
 <iframe src="https://www.youtube.com/embed/sPyAQQklc1s?si=ihed-LnLYFEe7xDc"
     
     title='Youtube video player'
-    allow='accelerometer; autoplay; clopboard-write; encrypted-media; gyroscope; picture-in-picture'
-    allowFullScreen>
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr'
+    allowFullScreen
+    >
 </iframe>
 </div>
 
@@ -78,7 +79,7 @@ function App() {
                     className="video"
                     url={projectVideo}
                     controls
-                    
+                    config={{ file: { forceVideo: true } }}
                     width="100%"
                     height="800px"
                    
