@@ -3,3 +3,14 @@
     position: 0;
     box-sizing: border-box;
 }
+
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    border-bottom: 0.2px solid;
+}

@@ -22,6 +22,23 @@ position: relative;
 
 `
 
+const ContainerTest = styled.div`
+width: 100px;
+height: 100px;
+background-color: #dcc36f;
+z-index: 1000;
+position: absolute;
+right: 800px;
+top: 200px;
+border-radius: 20px;
+cursor: pointer;
+`
+
+const LinkDiv = styled.div`
+  text-align: center;
+  padding-top: 33px;
+`
+
 
 
 
@@ -60,19 +77,15 @@ function App() {
 
 
 
-<Container>
-<div className='ratio ratio-16x9'>
 
-<iframe src="https://www.youtube.com/embed/sPyAQQklc1s?si=ihed-LnLYFEe7xDc"
-    
-    title='Youtube video player'
-    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; vr'
-    allowFullScreen
-    >
-</iframe>
-</div>
 
-</Container>
+
+<ContainerTest>
+<LinkDiv>
+<a href='https://realidad360.com.ar/' target='_BLANK' >CLICK </a>
+</LinkDiv>
+
+</ContainerTest>
 
 
 <StyledVideoPlayer
