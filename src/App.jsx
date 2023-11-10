@@ -1,6 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
+
+
+
 
 const PlayerWrapper = styled.div`
   display: flex;
@@ -23,7 +27,7 @@ const ContainerTest = styled.div`
   background-color: #dcc36f;
   border-radius: 20px;
   cursor: pointer;
-  margin: 10px;
+  margin: 100px;
   position: absolute;
 `;
 
@@ -60,16 +64,21 @@ function App() {
         </LinkDiv>
       </ContainerTest>
 
-      <ReactPlayer
-        url={projectVideo}
-        controls={true}
-        playing={playing}
-        config={{ file: { forceVideo: true } }}
-        width='100%'
-        height="100vh"
-        allowFullScreen
-        onClick={handleClick}
-      />
+    
+<ReactPlayer
+url={projectVideo}
+controls={true}
+playing={playing}
+config={{ file: { forceVideo: true } }}
+width='100%'
+height="100vh"
+allowFullScreen
+onClick={handleClick}
+/>
+
+     
+
+
 
      
     </PlayerWrapper>
