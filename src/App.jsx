@@ -6,7 +6,13 @@ const PlayerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
   
+`;
+
+const StyledReactPlayer = styled(ReactPlayer)`
+  width: 100% !important; /* Anula cualquier ancho establecido por ReactPlayer */
+  height: 100% !important; /* Anula cualquier altura establecida por ReactPlayer */
 `;
 
 
@@ -54,6 +60,7 @@ function App() {
         controls
         config={{ file: { forceVideo: true } }}
         width='100%'
+        height="100vh"
       />
 
      
