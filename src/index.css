@@ -14,3 +14,8 @@ a{
 a:hover{
     border-bottom: 0.2px solid;
 }
+
+.img{
+    width: 200px;
+    height: 200px;
+}
