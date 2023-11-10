@@ -46,6 +46,10 @@ function App() {
     }
   }, []);
 
+  const handleClick = () => {
+    setPlaying(!playing);
+  };
+
   return (
     <PlayerWrapper>
       <ContainerTest>
@@ -63,6 +67,8 @@ function App() {
         config={{ file: { forceVideo: true } }}
         width='100%'
         height="100vh"
+        allowFullScreen
+        onClick={handleClick}
       />
 
      
