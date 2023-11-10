@@ -36,7 +36,7 @@ const LinkDiv = styled.div`
 
 function App() {
   const videoRef = useRef(null);
-  const projectVideo = 'https://www.youtube.com/watch?v=TdrUWnZ04HY';
+  const projectVideo = 'https://www.youtube.com/watch?v=LEz0bBIDvbo';
 
   useEffect(() => {
     const videoElement = videoRef.current;
