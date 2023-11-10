@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
@@ -37,6 +37,7 @@ const LinkDiv = styled.div`
 function App() {
   const videoRef = useRef(null);
   const projectVideo = 'https://www.youtube.com/watch?v=LEz0bBIDvbo';
+  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -57,7 +58,8 @@ function App() {
 
       <ReactPlayer
         url={projectVideo}
-        controls
+        controls={true}
+        playing={playing}
         config={{ file: { forceVideo: true } }}
         width='100%'
         height="100vh"
