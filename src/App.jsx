@@ -23,7 +23,7 @@ const StyledReactPlayer = styled(ReactPlayer)`
 
 const ContainerTest = styled.div`
   width: 100px;
-  height: 100px;
+  height: 50px;
   background-color: #dcc36f;
   border-radius: 20px;
   cursor: pointer;
@@ -43,12 +43,7 @@ function App() {
   const projectVideo = 'https://www.youtube.com/watch?v=LEz0bBIDvbo';
   const [playing, setPlaying] = useState(false);
 
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    if (videoElement && videoElement.paused) {
-      videoElement.play();
-    }
-  }, []);
+
 
   const handleClick = () => {
     setPlaying(!playing);
@@ -56,13 +51,15 @@ function App() {
 
   return (
     <PlayerWrapper>
+      <a href='https://realidad360.com.ar/' target='_blank'>
       <ContainerTest>
         <LinkDiv>
-          <a href='https://realidad360.com.ar/' target='_blank'>
+          
             CLICK
-          </a>
+         
         </LinkDiv>
       </ContainerTest>
+      </a>
 
     
 <ReactPlayer
@@ -74,6 +71,7 @@ width='100%'
 height="100vh"
 allowFullScreen
 onClick={handleClick}
+playsInline
 />
 
      
